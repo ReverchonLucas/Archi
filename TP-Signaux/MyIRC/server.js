@@ -76,7 +76,16 @@ function broadcast(message, senderSocket) {
     });
 }
 
+async function handleSignal() {
+    clients.forEach((client) => {
+        client.socket.write(`le serveur va ferme dans 5s\n\r`);
+    });
+    console.log("Nettoyage en cours...")
+    setTimeout(() => {process.exit(0);},5000)
+    }
+
 // Démarre le serveur sur le port 6667
 server.listen(PORT, () => {
     console.log(`Serveur IRC en écoute sur le port ${PORT}`);
+    process.on("SIGINT", () => handleSignal());
 });
