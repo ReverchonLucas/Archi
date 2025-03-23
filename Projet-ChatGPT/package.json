@@ -1,5 +1,5 @@
 {
-  "name": "tp-rpc",
+  "name": "projet-chatgpt",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,9 +10,10 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@grpc/grpc-js": "^1.12.5",
-    "@grpc/proto-loader": "^0.7.13",
-    "axios": "^1.7.9",
-    "mongodb": "^6.13.1"
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "sqlite3": "^5.1.7"
   }
 }
